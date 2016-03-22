@@ -1,0 +1,59 @@
+/**
+ * Main
+ *
+ * Typography/Framework overrides
+ */
+
+
+.main {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  max-width: 320px;
+  max-height: 568px;
+
+  h1 {
+    font-family: $fontHeadingSmall;
+    font-size: $fontsizeLarge;
+
+    @media screen and (min-width: $scrTablS) {
+      font-family: $fontHeading;
+      font-size: $fontsizeLargest;
+    }
+  }
+
+  h2 {
+    span {
+      display: block;
+    }
+  }
+
+  p {
+    font-family: $fontText;
+    font-size: $fontsizeSmall;
+    line-height: 1.3;
+    margin: 0 0 .7em;
+    padding: 0;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  strong {
+    font-family: $fontHeavy;
+    font-weight: normal;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  a {
+
+    &:hover {
+      transition: all .2s;
+    }
+  
+    &[target="_blank"] {
+      background-image: none;
+      padding: 0;
+    }
+  }
+}

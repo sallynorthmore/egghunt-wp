@@ -1,0 +1,48 @@
+/**
+* Post
+*
+* Single work post
+*/
+
+
+.Post {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  max-width: 700px;
+}
+
+.Post-content {
+  order: 0;
+}
+
+.Post-button {
+  order: 1;
+}
+
+.Post-title {
+  // display: none;
+}
+
+.Post-body {
+  text-align: center;
+
+  img {
+    margin-bottom: 20px;
+    max-width: 100%;
+    height: auto;
+  }
+}
+
+.Close {
+  text-align: right;
+}
+
+.Close-inner {
+  background: url("../images/close.svg") no-repeat center transparent;
+  display: inline-block;
+  height: 100px;
+  width: 100px;
+  text-indent: -1000px;
+  font-size: 0;
+}

@@ -1,0 +1,133 @@
+/**
+ * Section
+ *
+ * Main blocks of content
+ */
+
+
+.section {
+  background: no-repeat top right;
+  background-size: contain;
+  overflow: hidden;
+  text-align: center;
+
+  p {
+    font-size: $fontsizeSmaller;
+    line-height: 1.6;
+    margin-bottom: 1em;
+  }
+
+  p.small {
+    color: $colorBlueDark;
+  }
+
+  @media screen and (min-width: $scrTablS) {
+
+    p {
+      font-size: $fontsizeSmall;
+    }
+  }
+}
+
+.section-inner {
+  margin: auto;
+  width: 100%;
+
+  @media screen and (min-width: $scrTablS) {
+    padding: 2em;
+  }
+}
+
+.section-title {
+  color: $colorBlack;
+  font-family: $fontHeadingSmall;
+  font-size: $fontsizeLarger;
+  font-style: italic;
+  font-weight: normal;
+  line-height: 1.2;
+  margin: 0 0 .8em;
+  padding: 0;
+  transition: opacity .1s ease-out;
+
+  &.is-hidden {
+    opacity: 0;
+  }
+
+  @media screen and (min-width: $scrTablS) {
+    font-size: $fontsizeLarger;
+  }
+}
+
+.section-items {
+  width: 100%;
+  height: 100vh;
+  list-style: none;
+  margin-left: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.section-item {
+  display: flex;
+  flex-direction: column;
+  font-family: $fontText;
+  height: 100vh;
+  overflow: hidden;
+  padding: 1em;
+  width: 100%;
+}
+
+.section-itemInner {}
+
+
+/*
+ * Holding page
+ */
+
+// .section--intro
+.home .section {
+  background-image: url(../img/kate-moss-90s-nick-knight.jpg);
+  background-position: center bottom;
+  display: flex;
+  height: 100%;
+  width: 100%;
+
+
+  &:after {
+    // background: url(../img/animated-kiss-03.gif) no-repeat 0 0;
+    background: url(/wp-content/uploads/2016/03/animated-kiss-03.gif) no-repeat 0 0;
+    content: "";
+    display: block;
+    height: 120px;
+    left: 76px;
+    position: absolute;
+    top: 360px;
+    transform-origin: center;
+    transform: rotate(15deg) scale(.9);
+    width: 150px;
+    z-index: 200;
+  }
+
+  .section-inner {
+    margin: 0 auto auto;
+  }
+
+  .section-body {
+    padding-top: 30px;
+  }
+
+  .section-title,
+  h1 {
+    color: var(--colorPink);
+    font-size: var(--font-size-large);
+    margin-top: 0px;
+    font-style: italic;
+  }
+
+  h2 {
+    color: var(--colorPink);
+    font-size: var(--font-size-small);
+    margin-top: 0px;
+    padding: 0;
+  }
+}
