@@ -26,7 +26,11 @@
 		<script src="https://use.typekit.net/dzj0sfx.js"></script>
 	        <script>try{Typekit.load({ async: true });}catch(e){}</script>
  -->
-		 <script src="https://use.typekit.net/jqn7urw.js"></script>
+		<script src="https://use.typekit.net/jqn7urw.js"></script>
+		<script src="<?php echo get_template_directory_uri(); ?>/js/modernizr-latest.js"></script>
+		<script src="<?php echo get_template_directory_uri(); ?>/js/device.js"></script>
+		
+
 		<script>try{Typekit.load({ async: true });}catch(e){}</script>
 		<?php wp_head(); ?>
 
@@ -37,4 +41,7 @@
 		</style>
 	</head>
 	<body <?php body_class( $class ); ?>>
+		<div class="message">
+			<h1>Open me on your phone xx</h1>
+		</div>
         <div class="">
