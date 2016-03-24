@@ -1,28 +1,29 @@
 <?php get_header(); ?>
 
-<section id="main">
+<section id="main" class="main">
 
-  <div class="Gallery">
+   <?php while (have_posts()) : the_post(); ?> 
+    
+    <?php if (has_post_thumbnail( $post->ID )) : ?>
+  <?php $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'single-post-thumbnail' ); ?>
+  <div class="section section--post" style="background-image: url('<?php echo $image['0']; ?>')">
+  <?php else: ?>
+  <div class="section section--post">
+  <?php endif; ?>>
+    
+        <div class="section-inner">
+            <h1 class="section-title">
+                <?php// the_title(); ?>
+            <h1>
 
-  	<ul class="Gallery-items">
-      <?php while (have_posts()) : the_post(); ?> 
-      <li class="Gallery-item">
-        <?php if ( has_post_thumbnail()) : ?>
-        <a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>">
-          <?php the_post_thumbnail(); ?>
-        </a>
-        <?php endif; ?>
-      
-        <h3 class="Gallery-itemTitle">
-          <a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>">
-            <?php the_title(); ?>
-          </a>
-        </h3>
-      </li>
-      <?php endwhile;?>
-    </ul>
-
-  </div>
+            <div class="section-body">
+                <?php the_content(); ?>
+            </div>
+            
+        </div>
+        
+    </div>
+    <?php endwhile;?>
 
 </section>
 

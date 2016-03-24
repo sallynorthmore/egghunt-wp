@@ -4,8 +4,10 @@
 	<?php while (have_posts()) : the_post(); ?> 
 	
 	<?php if (has_post_thumbnail( $post->ID )) : ?>
-		<?php $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'single-post-thumbnail' ); ?>
-		<div class="section" style="background-image: url('<?php echo $image['0']; ?>')">
+	<?php $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'single-post-thumbnail' ); ?>
+	<div class="section section--page" style="background-image: url('<?php echo $image['0']; ?>')">
+	<?php else: ?>
+	<div class="section section--page">
 	<?php endif; ?>
 	
 		<div class="section-inner">
@@ -21,8 +23,6 @@
 				<?php the_content(); ?>
 			</div>
 
-
-			
 		</div>
 		
 	</div>
