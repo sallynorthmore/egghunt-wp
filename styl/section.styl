@@ -32,7 +32,7 @@
 }
 
 .section-inner {
-  background-color: #36A8B2;
+  // background-color: #36A8B2;
   margin: auto;
   width: 100%;
 
@@ -135,5 +135,51 @@
     font-size: var(--font-size-small);
     margin-top: 0px;
     padding: 0;
+  }
+}
+
+
+/*
+ Clue pages / posts
+ */
+
+.section--post,
+.section--page {
+  background-color #36A8B2;
+
+  h2 {
+    font-size: 24px;
+  }
+
+  h3 {
+    font-size: 18px;
+  }
+
+  p {
+    font-size: 16px;
+  }
+
+  a {
+    color: magenta;
+    text-decoration: underline;
+  }
+
+  a.button {
+    border-radius: 7px;
+    background: white;
+    border: 2px solid white;
+    color: black;
+    display: flex;
+    display: block;
+    font-size: 14px;
+    font-weight: normal;
+    font-style: italic;
+    height: 50px;
+    justify-content: center;
+    line-height: 1;
+    text-decoration: none;
+    transition: all .2s ease-out;
+    white-space: normal;
+    width: 100%;
   }
 }
